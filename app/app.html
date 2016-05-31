@@ -1,0 +1,21 @@
+<ion-menu [content]="content">
+
+  <ion-toolbar>
+    <ion-title>Pages</ion-title>
+  </ion-toolbar>
+
+  <ion-content padding *ngIf="!auth.authenticated()">
+    <button block (click)="auth.login()">Login</button>
+  </ion-content>
+
+  <ion-content padding *ngIf="auth.authenticated()">
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
