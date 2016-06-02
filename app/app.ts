@@ -5,7 +5,8 @@ import {App, Platform, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {AuthHttp, AuthConfig} from 'angular2-jwt';
 import {AuthService} from './services/auth/auth';
-import {GettingStartedPage} from './pages/getting-started/getting-started';
+import {AllGalaxiesPage} from './pages/all-galaxies/all-galaxies';
+import {MyGalaxiesPage} from './pages/my-galaxies/my-galaxies';
 import {ProfilePage} from './pages/profile/profile';
 import {ListPage} from './pages/list/list';
 
@@ -35,8 +36,9 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Getting Started', component: GettingStartedPage },
-      { title: 'List', component: ListPage },
+      { title: 'All Galaxies', component: AllGalaxiesPage },
+      { title: 'My Galaxies', component: MyGalaxiesPage },
+      // { title: 'List', component: ListPage },
       { title: 'Profile', component: ProfilePage }
     ];
 
